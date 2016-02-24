@@ -20,13 +20,13 @@ public class POORelacionDeComposicion {
         Telefono starTac = new Telefono();
         
         starTac.EA.presionar();
-        System.out.println("El telefono starTac esta " + starTac.EA.IO);
+        System.out.println("El telefono StarTac esta " + starTac.EA.IO);
         
         starTac.EA.presionar(); 
-        System.out.println("El telefono starTac esta " + starTac.EA.IO);
+        System.out.println("El telefono StarTac esta " + starTac.EA.IO);
         
         starTac.EA.presionar(); 
-        System.out.println("El telefono starTac esta " + starTac.EA.IO);
+        System.out.println("El telefono StarTac esta " + starTac.EA.IO);
         
         starTac.setTeclado();
         System.out.println("\nMostrar teclado:");
