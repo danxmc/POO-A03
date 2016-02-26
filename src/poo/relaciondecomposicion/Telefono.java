@@ -12,7 +12,7 @@ package poo.relaciondecomposicion;
 public class Telefono {
     //Atributo, instanciar objeto
     public botonApagar EA = new botonApagar();
-    public Tecla [][] Teclado = new Tecla[5][3];
+    public Tecla Teclado[][] = new Tecla[5][3];
     
     //Methods
     //Constructor
