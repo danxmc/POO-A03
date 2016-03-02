@@ -22,13 +22,30 @@ public class Telefono {
 
     }
 
+    /**
+     * Method que guarda y sobreescribe en un indice especifico ingresado por el usuario,
+     * un nuevo contacto que escribe el usuario.
+     * @param n
+     * @param name
+     * @param tel
+     * @param mail 
+     */
     public static void guardaContactoEnN(int n, String name, String tel, String mail) {
-        if (n < 100 && n > 0) {
+        if (n < 100 && n >= 0) {
             Contacto Temp = new Contacto(name, tel, mail);
             Lista[n] = Temp;
+        } else {
+            System.out.println("El numero no esta en un rango valido de contactos.");
         }
     }
     
+    /**
+     * Method que guarda un contacto, primero llama a buscar un espacio en el array
+     * y luego asigna los datos a ese indice en el array.
+     * @param name
+     * @param tel
+     * @param mail 
+     */
     public static void guardaContacto(String name, String tel, String mail) {
         int espacio = buscaEspacio(Lista);
         if (espacio < 0) {
@@ -39,6 +56,11 @@ public class Telefono {
         }
     }
 
+    /**
+     * Method que busca un espacio diponible en la lista de array de constacto
+     * @param Lista, array que contiene los contactos
+     * @return t el indice del primer contacto libre que se encuentre en el array
+     */
     private static int buscaEspacio(Contacto[] Lista) {
         int t = -1;
         for (int i = 0; i <= Lista.length; i++) {
@@ -50,10 +72,17 @@ public class Telefono {
         return t;
     }
 
+    /**
+     * Method que muestra un contacto especifico ingresado por el usuario.
+     * @param n 
+     */
     public static void showContacto(int n) {
         Lista[n].getContacto();
     }
-
+    
+    /**
+     * Method que muestra la lista completa de los contactos
+     */
     public static void showLista() {
         for (int i = 0; i < Lista.length; i++) {
             if (Lista[i] == null) {

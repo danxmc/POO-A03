@@ -21,6 +21,9 @@ public class Contacto {
         this.numero = numero;
     }
 
+    /**
+     * Method que imprime los datos del contacto
+     */
     public void getContacto() {
         System.out.println("Nombre: " + this.nombre);
         System.out.println("Numero: " + this.numero);
