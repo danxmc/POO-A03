@@ -22,12 +22,6 @@ public class POORelacionDeComposicion {
         starTac.EA.presionar();
         System.out.println("El telefono StarTac esta " + starTac.EA.IO);
         
-        starTac.EA.presionar(); 
-        System.out.println("El telefono StarTac esta " + starTac.EA.IO);
-        
-        starTac.EA.presionar(); 
-        System.out.println("El telefono StarTac esta " + starTac.EA.IO);
-        
         starTac.setTeclado();
         System.out.println("\nMostrar teclado:");
         for (int i = 0; i < starTac.Teclado.length; i++) {
@@ -36,6 +30,13 @@ public class POORelacionDeComposicion {
             }
             System.out.println("");
         }
+        
+        Telefono.guardaContacto("Daniel", "1234567", "cykablyat@itesm.mx");
+        Telefono.guardaContacto("Netito", "7654321", "ers_panda@hotmail.com");
+        Telefono.guardaContacto("Zepen", "8459324", "zepen_necky@hotmail.com");
+        Telefono.showContacto(0);
+        Telefono.guardaContactoEnN(99, "Luisa", "75648292", "luisa_pineda@licenciada.com");
+        Telefono.showLista();
     }
     
 }
